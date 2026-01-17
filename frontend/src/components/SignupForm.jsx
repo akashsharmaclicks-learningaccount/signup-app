@@ -23,6 +23,7 @@ const Signup = () => {
     try {
       const res = await signupUser(formData);
       setMessage(res.data.message);
+      setFormData({ name: "", email: "", password: "" });
     } catch (error) {
       setMessage(error.response?.data?.error || "Signup failed");
     }
@@ -40,7 +41,7 @@ const Signup = () => {
           value={formData.name}
           onChange={handleChange}
         />
-
+        <br />
         <input
           type="email"
           name="email"
@@ -48,7 +49,7 @@ const Signup = () => {
           value={formData.email}
           onChange={handleChange}
         />
-
+        <br />
         <input
           type="password"
           name="password"
@@ -56,7 +57,7 @@ const Signup = () => {
           value={formData.password}
           onChange={handleChange}
         />
-
+        <br />
         <button type="submit">Signup</button>
       </form>
 
