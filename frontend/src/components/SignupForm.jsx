@@ -9,6 +9,7 @@ const Signup = () => {
   });
 
   const [message, setMessage] = useState("");
+  const [isError, setIsError] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -24,13 +25,15 @@ const Signup = () => {
       const res = await signupUser(formData);
       setMessage(res.data.message);
       setFormData({ name: "", email: "", password: "" });
+      setIsError(false);
     } catch (error) {
       setMessage(error.response?.data?.error || "Signup failed");
+      setIsError(true);
     }
   };
 
   return (
-    <div>
+    <div className="signup-container">
       <h2>Signup Form</h2>
 
       <form onSubmit={handleSubmit}>
@@ -61,7 +64,11 @@ const Signup = () => {
         <button type="submit">Signup</button>
       </form>
 
-      {message && <p>{message}</p>}
+      {message && (
+        <p className={isError ? "error-message" : "success-message"}>
+          {message}
+        </p>
+      )}
     </div>
   );
 };
