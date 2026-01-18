@@ -5,3 +5,7 @@ const API = axios.create({
 export const signupUser = (userData) => {
   return API.post("/signup", userData);
 };
+
+export const loginUser = (userData) => {
+  return API.post("/login", userData);
+};
