@@ -1,3 +1,64 @@
+/* Reset */
 body {
   font-family: Arial, sans-serif;
+  background: #f4f6f8;
+}
+
+/* Container */
+.signup-container {
+  width: 350px;
+  margin: 80px auto;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.signup-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form */
+.signup-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Button */
+.signup-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.signup-form button:hover {
+  background-color: #1e4ed8;
+}
+
+/* Messages */
+.success-message {
+  margin-top: 15px;
+  color: #166534;
+  background: #dcfce7;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.error-message {
+  margin-top: 15px;
+  color: #991b1b;
+  background: #fee2e2;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
 }
