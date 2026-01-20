@@ -22,7 +22,6 @@ const Login = () => {
       localStorage.setItem("token", res.data.token);
       setMessage(res.data.message);
       setFormData({ email: "", password: "" });
-      console.log("Data received:", res.data);
       setUserName(res.data.user.name);
       setIsError(false);
     } catch (error) {
