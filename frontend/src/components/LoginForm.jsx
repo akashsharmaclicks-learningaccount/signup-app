@@ -19,6 +19,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const res = await loginUser(formData);
+      localStorage.setItem("token", res.data.token);
       setMessage(res.data.message);
       setFormData({ email: "", password: "" });
       console.log("Data received:", res.data);
